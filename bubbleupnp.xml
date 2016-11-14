@@ -11,20 +11,8 @@
   <WebUI>http://[IP]:[PORT:58050]</WebUI>
   <TemplateURL/>
   <Icon>https://lh6.ggpht.com/L5IDTYtc4hFL-X97zxQ6Uuy2n2kB_ZxZ76SCZGAKVWd4hwYFEvl-rMWgvpcLAlBwOhBB=w300-rw</Icon>
-  <Description>
-    BubbleUPnP Server provides new services, many of them running on top of your existing UPnP/DLNA devices:
-make various media formats not natively supported by Chromecast playable with transcoding. Works in tandem with Android BubbleUPnP
-secure Internet access to your UPnP/DLNA Media Servers content with Android BubbleUPnP and foobar2000.
-stream and download your music, video, photos with your Android device from a mobile or WiFi connection with optional transcoding to reduce bandwidth.
-no need to sync, to upload to the cloud, to register to an online service
-create OpenHome Media Renderers from any UPnP AV or Google Cast renderer (provides on-device playlist, multiple Control Point access to the same renderer)
-create an UPnP/DLNA renderer from any Google Cast device
-fix issues of UPnP/DLNA Media Servers (discovery issues, broken data, add some audio DLNA compliance) by creating a proxy Media Server
-access your UPnP/DLNA Media Servers across different networks
-BUBBLEUPNP SERVER IS NOT AN UPNP AV MEDIA SERVER.
-Unless BubbleUPnP Server is used only for use with Chromecast, it requires at least one working UPnP AV Media Server or Media Renderer to do something useful.
-  </Description>
-    <Networking>
+  <Description/>
+  <Networking>
     <Mode>host</Mode>
     <Publish>
       <Port>
@@ -34,7 +22,7 @@ Unless BubbleUPnP Server is used only for use with Chromecast, it requires at le
       </Port>
     </Publish>
   </Networking>
-    <Data>
+  <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/bubbleupnp/</HostDir>
       <ContainerDir>/config</ContainerDir>
@@ -42,7 +30,6 @@ Unless BubbleUPnP Server is used only for use with Chromecast, it requires at le
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="HTTP" Target="58050" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">58050</Config>
-  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bubbleupnp/</Config>
-
+  <Config Name="HTTP" Target="58050" Default="58050" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">58050</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/bubbleupnp/" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bubbleupnp/</Config>
  </Container>
