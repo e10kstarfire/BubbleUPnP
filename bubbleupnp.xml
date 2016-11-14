@@ -24,15 +24,13 @@
       </Port>
     </Publish>
   </Networking>
-  <WebUI>http://[IP]:[PORT:58050]</WebUI>
-  <Data>
+    <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/bubbleupnp/</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
+  <WebUI>http://[IP]:[PORT:58050]</WebUI>
   <Environment/>
-  <Config Name="GUI" Target="58050" Default="" Mode="tcp" Description="Container Port: " Type="Port" Display="always" Required="false" Mask="false">58050</Config>
-  <Config Name="Config" Target="/config" Default="" Mode="rw" Description="Container Path: /config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/bubbleupnp/</Config>
-</Container>
+ </Container>
