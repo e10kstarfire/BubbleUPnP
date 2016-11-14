@@ -24,6 +24,7 @@
       </Port>
     </Publish>
   </Networking>
+  <WebUI>http://[IP]:[PORT:58050]</WebUI>
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/bubbleupnp/</HostDir>
