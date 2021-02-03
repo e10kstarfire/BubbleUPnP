@@ -1,7 +1,9 @@
-FROM gliderlabs/alpine:latest
+FROM alpine
 
-RUN set -ex && \
-    apk add --no-cache openjdk8-jre unzip wget ffmpeg sox
+#RUN set -ex && \
+#    apk add --no-cache openjdk8-jre unzip wget ffmpeg sox
+
+RUN apk add --no-cache ffmpeg openjdk8-jre iptables sox
 
 EXPOSE 58050/tcp 58051/tcp 1900/udp
 
@@ -15,6 +17,6 @@ RUN set -ex && \
     chmod +x launch.sh && \
     rm BubbleUPnPServer-distrib.zip && \
     mkdir /config && \
-    ln -s /config/configuration.xml /bubbleupnpserver/configuration.xml
+    ln -s /config/configuration.xml /bubbleupnpserver/configuration.xml 
 
 VOLUME /config
